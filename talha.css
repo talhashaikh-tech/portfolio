@@ -74,8 +74,14 @@ h2 {
   height: 150px;
   border-radius: 50%;
   border: 5px solid #ec4899;
-  margin-top: -60px; /* Half of the image height */
+  margin-top: -50px; /* Half of the image height */
   margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.profile-image:hover {
+  transform: scale(1.1);
 }
 nav {
   text-transform: uppercase;
