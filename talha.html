@@ -1,0 +1,135 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="talha.css" />
+</head>
+
+<body>
+  <div class="background">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+    </nav>
+  </div>
+  <header>
+    <img src="profile.jpeg" alt="Talha Shaikh" class="profile-image" />
+    <h1>Hi, I'm Talha Shaikh</h1>
+    <p class="single-line">Web Designer & Frontend Developer</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://drive.google.com/file/d/1-EUWiumDc--wM8R6DzeW7woiRdP62VtT/view?usp=drive_link"
+      class="btn">Resume</a>
+    <div class="typing" id="typing-text">web development</div>
+
+  </header>
+  <hr>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          Enthusiastic and detail-focused BCA graduate with a strong passion for
+          frontend development and user interface design. Proficient in HTML,
+          CSS, JavaScript, and modern frameworks like React.js and Bootstrap.
+          Seeking an internship to apply these skills and contribute to
+          innovative web development projects. A quick learner with a creative
+          mindset, eager to contribute to innovative projects and grow as a
+          frontend developer in a dynamic tech environment.
+        </p>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React.js</li>
+          <li>Bootstrap</li>
+          <li>Responsive Design</li>
+          <li>Problem Solving</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>Myntra Clone</h3>
+        <p>
+          The Myntra Clone is a web-based e-commerce applica on that replicates
+          the core design and func onality of the popular fashion retail pla
+          orm, Myntra. This project is developed using HTML, CSS, JavaScript,
+          React.js, and Bootstrap to create a responsive, user-friendly
+          interface and a dynamic shopping experience.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>
+          The Personal Portfolio Website is a fully responsive and modern website developed to showcase my skills,
+          projects, and contact information as a web developer.
+        </p>
+      </div>
+    </section>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="card">
+        <h3>CSS zero to hero</h3>
+        <p>
+          This certification course helped me master the fundamentals of CSS,
+          including layout techniques, responsive design, and advanced styling
+          concepts. I learned how to create visually appealing and user-friendly
+          web pages that adapt to different screen sizes and devices.
+          <a href="https://learn.knowledgegate.ai/learn/home/React-and-Redux-Certification-Test---Youtube-Course/section/580153/lesson/3626496?"
+            target="_blank"><button class="cirti-btn">View Certificate</button></a>
+        </p>
+
+      </div>
+    </section>
+  </div>
+  <hr>
+  <footer>
+    <p class="single-line">
+    <p>&copy; 2025 Talha. All rights reserved.</p>
+    <p>Connect with me:</p>
+    <a href="https://www.linkedin.com/in/mohammedtalha-shaikh">LinkedIn</a> |
+    <a href="https://github.com/mohammedtalha">GitHub</a> |
+    <a href="mailto:talhashaikh1155@gmail.com">Email</a>
+    </p>
+  </footer>
+  <script>
+    const texts = [
+  "Frontend Developer",
+  "Learning Enthusiast",
+  "Open Source Contributor",
+  
+];
+let i = 0,
+  char = 0,
+  dir = 1;
+const el = document.getElementById("typing-text");
+
+function typeLoop() {
+  el.textContent = texts[i].substring(0, char);
+  char += dir;
+  if (char === texts[i].length + 1 || char === 0) {
+    dir *= -1;
+    if (dir === 1) i = (i + 1) % texts.length;
+  }
+  setTimeout(typeLoop, dir === 1 ? 100 : 50);
+}
+typeLoop();
+
+  </script>
+</body>
+
+</html>
