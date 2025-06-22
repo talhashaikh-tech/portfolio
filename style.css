@@ -244,7 +244,7 @@ hr {
   }
 
   nav {
-    flex-direction: column;
+   
     align-items: center;
   }
 
@@ -254,6 +254,7 @@ hr {
   }
 
   .btn, .cirti-btn {
+    margin-left: auto;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
